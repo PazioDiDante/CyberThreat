@@ -1,0 +1,256 @@
+﻿<Window WindowStyle="SingleBorderWindow" Name="Threat_Window" x:Class="CyberThreat.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:CyberThreat" mc:Ignorable="d" Title="MainWindow" Height="780" Width="659" ResizeMode="NoResize">
+    <Window.Resources>
+        <CircleEase EasingMode="EaseOut" x:Key="MyEaseOut" />
+        <Style TargetType="{x:Type Border}" x:Key="MyButtonStyle">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Border.MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="155" Duration="0:0:0.2" EasingFunction="{StaticResource MyEaseOut}" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="46.2" Duration="0:0:0.2" EasingFunction="{StaticResource MyEaseOut}" />
+                                <DoubleAnimation Storyboard.TargetProperty="(Effect).ShadowDepth" To="25" Duration="0:0:0.2" EasingFunction="{StaticResource MyEaseOut}" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Border.MouseLeftButtonDown">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="130" Duration="0:0:0.05" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="38.5" Duration="0:0:0.05" />
+                                <DoubleAnimation Storyboard.TargetProperty="(Effect).ShadowDepth" To="3" Duration="0:0:0.05" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Border.MouseLeftButtonUp">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="141" Duration="0:0:0.2" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="42" Duration="0:0:0.2" />
+                                <DoubleAnimation Storyboard.TargetProperty="(Effect).ShadowDepth" To="10" Duration="0:0:0.2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Border.MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="141" Duration="0:0:0.2" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="42" Duration="0:0:0.2" />
+                                <DoubleAnimation Storyboard.TargetProperty="(Effect).ShadowDepth" To="10" Duration="0:0:0.2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type Image}" x:Key="MyImageStyle">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Image.MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="75" Duration="0:0:0.2" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="75" Duration="0:0:0.2" />
+                                <DoubleAnimation Storyboard.TargetProperty="(Effect).ShadowDepth" To="10" Duration="0:0:0.2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Image.MouseLeftButtonDown">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="65" Duration="0:0:0.05" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="65" Duration="0:0:0.05" />
+                                <DoubleAnimation Storyboard.TargetProperty="(Effect).ShadowDepth" To="2" Duration="0:0:0.05" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Image.MouseLeftButtonUp">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="75" Duration="0:0:0.2" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="75" Duration="0:0:0.2" />
+                                <DoubleAnimation Storyboard.TargetProperty="(Effect).ShadowDepth" To="10" Duration="0:0:0.2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Image.MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="70" Duration="0:0:0.2" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="70" Duration="0:0:0.2" />
+                                <DoubleAnimation Storyboard.TargetProperty="(Effect).ShadowDepth" To="5" Duration="0:0:0.2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <StackPanel>
+            <Grid x:Name="Main_Grid">
+                <Grid Margin="10,10,10,10" Height="auto">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <ListBox Grid.Row="0" x:Name="Main_List" HorizontalAlignment="Left" Height="557" Margin="0,0,0,0" VerticalAlignment="Top" Width="623" MouseDoubleClick="Main_List_Double_Click">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="5">
+                                    <Rectangle StrokeThickness="3" RadiusX="12.5" RadiusY="12.5" Height="55" Stroke="#FF22A457" Width="580" Margin="0" HorizontalAlignment="Stretch" Fill="#FFF4F4F5" />
+                                    <TextBlock x:Name="Threat_Name" Text="{Binding Name}" Height="Auto" MaxWidth="480" MaxHeight="58" Margin="90,0,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                    <TextBlock x:Name="Threat_Id" FontSize="18" MaxWidth="400" MaxHeight="58" Margin="10,0,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center"><Run Text="УБИ." /><Run Text=" " /><Run Text="{Binding Id}" /></TextBlock>
+                                    <Line X1="85" Y1="0" X2="85" Y2="55" Fill="#FF22A457" Stroke="#FF22A457" StrokeThickness="3" />
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Grid Grid.Row="1" Width="Auto" Margin="0,0,0,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80" />
+                            <RowDefinition Height="70" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Style="{StaticResource MyImageStyle}" Source="rewind.png" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="70" MouseLeftButtonUp="Previos_Page_Button_Click" Margin="10,0,0,0">
+                            <Image.Effect>
+                                <DropShadowEffect Opacity="0.5" />
+                            </Image.Effect>
+                        </Image>
+                        <Image Style="{StaticResource MyImageStyle}" Source="rewind (1).png" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="70" Height="70" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="Next_Page_Button_CLick" Margin="0,0,10,0">
+                            <Image.Effect>
+                                <DropShadowEffect Opacity="0.5" />
+                            </Image.Effect>
+                        </Image>
+                        <TextBlock FontSize="20" x:Name="Max_Page_Text" HorizontalAlignment="Left" Margin="96,29,0,0" TextWrapping="Wrap" Text="/1" VerticalAlignment="Top" Grid.Column="1" Grid.Row="0" />
+                        <TextBox FontSize="20" x:Name="Page_Text" Margin="0,28,117,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" KeyDown="Page_Text_Key_Down" Grid.Column="1" Grid.Row="0" Background="White" HorizontalAlignment="Right" Width="39" HorizontalContentAlignment="Right" Height="29" />
+                        <Border Style="{StaticResource MyButtonStyle}" x:Name="Save_Button" CornerRadius="5" BorderThickness="0" Grid.Column="1" Margin="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="42" Width="141" Background="#9ad568" BorderBrush="Black" MouseLeftButtonUp="Save_Button_MouseLeftButtonUp">
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.5" Direction="325" ShadowDepth="10" />
+                            </Border.Effect>
+                            <Grid>
+                                <TextBlock Text="Сохранить" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="12,0,0,0" FontFamily="Segoe UI Semibold" Foreground="#FFF5F5F4" />
+                                <Ellipse Width="36" Height="36" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,7,0" Fill="#FFF5F5F4" />
+                                <Image Source="Save.png" Width="25" Height="25" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,12,0" />
+                            </Grid>
+                        </Border>
+                        <Border Style="{StaticResource MyButtonStyle}" x:Name="Refresh_Button2" CornerRadius="5" BorderThickness="0" Grid.Column="2" Margin="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="42" Width="141" Background="#fccf53" BorderBrush="Black" MouseLeftButtonUp="Refresh_Button_Click">
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.5" Direction="325" ShadowDepth="10" />
+                            </Border.Effect>
+                            <Grid>
+                                <TextBlock Text="Обновить" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0" FontFamily="Segoe UI Semibold" Foreground="#FFF5F5F4" />
+                                <Ellipse Width="36" Height="36" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,7,0" Fill="#FFF5F5F4" />
+                                <Image Source="refresh-button.png" Width="25" Height="25" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,12.4,0" />
+                            </Grid>
+                        </Border>
+                        <Border Style="{StaticResource MyButtonStyle}" x:Name="Open_Button" CornerRadius="5" BorderThickness="0" Margin="0" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="42" Width="141" Background="#5c9eee" BorderBrush="Black" MouseLeftButtonUp="Open_File_Button">
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.5" Direction="325" ShadowDepth="10" />
+                            </Border.Effect>
+                            <Grid>
+                                <TextBlock Text="Открыть" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0" FontFamily="Segoe UI Semibold" Foreground="#FFF5F5F4" />
+                                <Ellipse Width="36" Height="36" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,7,0" Fill="#FFF5F5F4" />
+                                <Image Source="bleach.png" Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,1,15,0" />
+                            </Grid>
+                        </Border>
+
+                    </Grid>
+                </Grid>
+            </Grid>
+        </StackPanel>
+        <Grid Name="Description_Grid">
+            <Grid.RenderTransform>
+                <TranslateTransform X="600" />
+            </Grid.RenderTransform>
+            <Grid Background="#7E000000"  Margin="50,20,-77,-20">
+                <Grid.Effect>
+                    <BlurEffect Radius="25" />
+                </Grid.Effect>
+
+            </Grid>
+            <Border CornerRadius="20" Background="White" Margin="76,15,-77,0" Visibility="Visible" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="654" Height="750" VerticalAlignment="Top">
+                <Image Style="{StaticResource MyImageStyle}" Source="right-arrow.png" HorizontalAlignment="Left" Width="56" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="Hide_Description_Button" Margin="10,10,0,0" Height="56" VerticalAlignment="Top">
+                    <Image.Effect>
+                        <DropShadowEffect Opacity="0.5" />
+                    </Image.Effect>
+                </Image>
+            </Border>
+            <Grid>
+                <ScrollViewer Margin="100,100,-25,0" Height="Auto" Width="Auto">
+                    <Grid Height="Auto" Width="Auto" Margin="0,0,15,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock x:Name="Name_Text" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="177" FontWeight="Bold" FontSize="20" TextDecorations="Underline" Grid.Row="0" />
+                        <TextBlock x:Name="Description_Text" Margin="0,0,20,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="Auto" Width="Auto" FontSize="14" Grid.Row="1" />
+                        <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="Auto" Width="auto" FontSize="16" Text="Источник угрозы:" Grid.Row="2" FontWeight="Bold" />
+                        <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="Auto" Width="auto" FontSize="16" Text="Объект воздействия:" Grid.Row="4" FontWeight="Bold" />
+                        <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="Auto" Width="Auto" FontSize="16" Text="Нарушение конфиденциальности:" Grid.Row="6" FontWeight="Bold" />
+                        <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="Auto" Width="auto" FontSize="16" Text="Нарушение целостности:" Grid.Row="8" FontWeight="Bold" />
+                        <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="Auto" Width="auto" FontSize="16" Text="Нарушение доступности:" Grid.Row="10" FontWeight="Bold" />
+                        <TextBlock x:Name="Source_Text" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="Auto" Width="auto" FontSize="16" Grid.Row="3" />
+                        <TextBlock x:Name="Subject_Text" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="Auto" Width="auto" FontSize="16" Grid.Row="5" />
+                        <TextBlock x:Name="Confidential_Text" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="Auto" Width="Auto" FontSize="16" Grid.Row="7" />
+                        <TextBlock x:Name="Integ_Text" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="Auto" Width="auto" FontSize="16" Grid.Row="9" />
+                        <TextBlock x:Name="Availability_Text" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="Auto" Width="auto" FontSize="16" Grid.Row="11" />
+
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+        <Grid Name="Loading_Layer" Tag="Done" Background="#33808080" Visibility="Collapsed" MouseLeftButtonUp="Hide_Load_Screen">
+            <Border Padding="10" CornerRadius="20" Background="#99555555" Width="302" VerticalAlignment="Center" MinHeight="400">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Name="Done" Source="Done.png" Width="150" Height="150" Visibility="Collapsed" />
+                    <Image Name="Warning" Source="warning.png" Width="150" Height="150" Visibility="Collapsed" />
+                    <Image Name="Clock" Source="wall-clock.png" Width="150" Height="150" Margin="0,0,0,50" RenderTransformOrigin="0.5,0.5" Visibility="Visible">
+                        <Image.RenderTransform>
+                            <RotateTransform Angle="0" />
+                        </Image.RenderTransform>
+                        <Image.Triggers>
+                            <EventTrigger RoutedEvent="Loaded">
+                                <EventTrigger.Actions>
+                                    <BeginStoryboard>
+                                        <Storyboard TargetProperty="(RenderTransform).Angle">
+                                            <DoubleAnimation From="0" To="360" RepeatBehavior="Forever" Duration="0:0:3" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger.Actions>
+                            </EventTrigger>
+                        </Image.Triggers>
+                    </Image>
+                    <TextBlock x:Name="Load_Text" TextAlignment="Center" TextTrimming="WordEllipsis" MaxHeight="400" Text="Загружаем базу..." TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="25" FontFamily="Segoe UI Semibold" Foreground="White" />
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
